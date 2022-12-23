@@ -482,7 +482,8 @@ header {
 
 
 
-/* ======СТР."ПОРТФОЛИО"====== */
+/* =======================
+======СТР."ПОРТФОЛИО"====== */
 
 /* Скрытый заголовок на стр Портфолио */
 /* .portfolio-section-title {
@@ -516,6 +517,9 @@ header {
     text-align: center;
     letter-spacing: 0.04em;
     padding: 8px 16px;
+
+    /* ---анимация--- */
+        transition: background-color color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover {
     background-color: var(--accent-color);
@@ -585,6 +589,9 @@ portfolio)*/
     border: 0.5px solid #F4F4FD;
     border-top: none;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    /* ---анимация--- */
+    transition: box-shadow color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .work-content:hover, .work-content:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
