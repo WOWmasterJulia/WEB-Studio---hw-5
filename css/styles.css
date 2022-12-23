@@ -161,14 +161,14 @@ header {
 }
 
 .site-nav .nav-link.current {
-    color: var(--accent-color);  
+    color: var(--accent-color-focus);  
 }
 .nav-link.current:hover,
 .nav-link:hover {
-    color: var(--primary-text-color);
+    color: var(--accent-color-focus);
 }
 .nav-link.current:focus, .nav-link:focus {
-    color: var(--accent-color);
+    color: var(--accent-color-focus);
 }
 
 /* --Contacts-- */
