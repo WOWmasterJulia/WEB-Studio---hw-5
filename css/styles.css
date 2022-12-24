@@ -621,7 +621,7 @@ portfolio)*/
     transition: transform var(--anim-slow);
 }
 
-.work-list>.item:hover .overlay{
+.work-list>.item:hover .overlay, .work-list>.item:focus .overlay{
     transform: translateY(0);
 }
 
