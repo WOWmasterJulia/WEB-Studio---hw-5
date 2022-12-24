@@ -28,6 +28,8 @@ html {
     /* others */
     --header-idx: 100;
     --modal-idx: 1000;
+    --anim-fast: 1300ms ease;
+    --anim-slow: 1800ms ease-out;
 }
 
 body {
@@ -595,6 +597,25 @@ portfolio)*/
     /* flex-basis: calc(100% / 3 - 24px); */
     padding-top: 0;
     flex-basis: calc((100%  - 48px) /3);
+
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 40px 32px 164px 32px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--accent-color);
+    /* backdrop-filter: blur(3px); */
+    color: var(--logo-text-white);
 }
 
 /* Это правило - не нужен правый отступ у каждого 3-го элемента (а у других по 24рх) - не срабатывает: */
@@ -653,27 +674,54 @@ MODAL WINDOW
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     backdrop-filter: blur(1px);
+
+    transition: visibility var(--anim-fast), opacity var(--anim-fast);
 }
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 1;
+
     width: 408px;
     min-height: 576px;
 
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    transition: opacity var(--anim-fast) 200ms,
+    transform var(--anim-fast) 200ms;
 }
+
+.backdrop.is-hidden.modal {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+}
+
 .modal-btn {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    width: 24px;
+    height: 24px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    border-radius: 50%;
     background-color: #E7E9FC;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
 }
