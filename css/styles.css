@@ -598,6 +598,8 @@ portfolio)*/
     padding-top: 0;
     flex-basis: calc((100%  - 48px) /3);
 
+    overflow: hidden;
+
     position: relative;
 }
 .overlay {
@@ -605,6 +607,7 @@ portfolio)*/
     top: 0;
     left: 0;
 
+    transform: translateY(100%);
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -615,9 +618,16 @@ portfolio)*/
 
     background-color: var(--accent-color);
     /* backdrop-filter: blur(3px); */
-    color: var(--logo-text-white);
+    transition: transform var(--anim-slow);
 }
 
+.work-list>.item:hover .overlay{
+    transform: translateY(0);
+}
+
+.overlay-text {
+    color: var(--logo-text-white);
+}
 /* Это правило - не нужен правый отступ у каждого 3-го элемента (а у других по 24рх) - не срабатывает: */
 /* .work-list .item:nth-child(3n) {
     padding-right: 0; 
