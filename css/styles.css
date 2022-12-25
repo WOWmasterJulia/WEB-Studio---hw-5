@@ -173,7 +173,8 @@ header {
 .site-nav .nav-link.current::before {
     content: '';
     position: absolute;
-    bottom: 20px;
+    /* bottom: 20px; */
+    bottom: 0;
     left: 0;
 
     display: block;
@@ -612,18 +613,21 @@ portfolio)*/
     margin-top: 48px;  */
     /* flex-basis: calc(100% / 3 - 24px); */
     padding-top: 0;
-    flex-basis: calc((100%  - 48px) /3);
+    flex-basis: calc((100%  - 48px) /3);   
+}
 
+.photo-text {
     overflow: hidden;
-
     position: relative;
 }
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
 
     transform: translateY(100%);
+
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -643,7 +647,11 @@ portfolio)*/
 
 .overlay-text {
     color: var(--logo-text-white);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
+
 
 /* Это правило - не нужен правый отступ у каждого 3-го элемента (а у других по 24рх) - не срабатывает: */
 /* .work-list .item:nth-child(3n) {
@@ -729,7 +737,7 @@ MODAL WINDOW
     transform var(--anim-fast) 200ms;
 }
 
-.backdrop.is-hidden.modal {
+.backdrop.is-hidden .modal {
     transform: translate(-50%, -70%);
     opacity: 0;
 }
