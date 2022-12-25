@@ -638,10 +638,10 @@ portfolio)*/
 
     background-color: var(--accent-color);
     /* backdrop-filter: blur(3px); */
-    transition: transform var(--anim-slow);
+    transition: transform var(--anim-fast);
 }
 
-.work-list>.item:hover .overlay, .work-list>.item:focus .overlay{
+.work-list>.item:hover .overlay, .work-list>.item:focus .overlay {
     transform: translateY(0);
 }
 
