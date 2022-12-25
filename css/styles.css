@@ -760,3 +760,7 @@ MODAL WINDOW
     cursor: pointer;
 
 }
+.modal-btn:hover, .modal-btn:focus {
+    background-color: var(--accent-color-focus);
+    color: var(--text-white-color);
+}
