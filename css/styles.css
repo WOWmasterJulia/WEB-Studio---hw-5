@@ -640,8 +640,17 @@ portfolio)*/
     /* backdrop-filter: blur(3px); */
     transition: transform var(--anim-fast);
 }
+/* Фокус працює лише із інтерактивними елементами,
+тому додавати його потрібно на посилання. Замінити потрібно .work-list>.item:hover .overlay,
+.work-list>.item:focus .overlay {
+    transform: translateY(0);
+}
 
-.work-list>.item:hover .overlay, .work-list>.item:focus .overlay {
+на .work:hover .overlay,
+.work:focus .overlay {
+    transform: translateY(0);
+} */
+.work:hover .overlay, .work:focus .overlay {
     transform: translateY(0);
 }
 
